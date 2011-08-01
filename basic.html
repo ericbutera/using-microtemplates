@@ -1,0 +1,39 @@
+<html>
+<head>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.1.7/underscore-min.js"></script>
+
+<script type="text/html" id="welcome-tpl">
+  <p><em>Exciting Template!</em></p>
+  <p><strong >Hello <%= name %></strong></p>
+</script>
+
+<script type="text/javascript">
+(function($){
+  $(function(){
+
+    var greet = _.template( $("#welcome-tpl").text() );
+    $("#welcome-action").click(function(){
+        var html = greet({'name': $("#name").val() });
+        $("#welcome").html(html);
+    });
+
+  });
+})(jQuery);
+</script>
+
+</head>
+<body>
+
+<div id="welcome"></div>
+<em>Exciting Markup!</em>
+<form>
+<label for="name">Name please</label>
+<input name="name" id="name" value="Ishmael" />
+<input type="button" id="welcome-action" value="Click for a surprise" />
+</form>
+
+</body>
+</html>
+
