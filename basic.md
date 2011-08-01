@@ -67,9 +67,9 @@ part is calling greet with json to fill in the view variables.
 
 This demo is hopefully straight forward.  The workflow boils down like
 so:
- -   create a form to gather name
- -   create a template inside a script tag that we can access
- -   use jQuery to watch for click to render our template with user input
+* create a form to gather name
+* create a template inside a script tag that we can access
+* use jQuery to watch for click to render our template with user input
 
 In part two I'll walk through creating an application that will fetch
 weather from a remote API and render it using templates and partials.
